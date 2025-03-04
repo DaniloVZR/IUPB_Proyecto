@@ -1,0 +1,151 @@
+/* Default Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dedce0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  min-height: 100dvh;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin-top: 8rem;
+  padding: 0 8rem;
+}
+
+.container section,
+footer {
+  scroll-margin-top: 8rem;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: #371174;
+  color: #fff;
+  padding: 1rem 8rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header h1 {
+  font-style: italic;
+}
+
+.header h1 span {
+  color: #000;
+  background-color: #d3b8ee;
+  padding: .2rem 1rem;
+  margin: 0 .5rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.menu {
+  display: none;
+}
+
+.nav a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition-duration: .4s;
+}
+
+.nav a:hover {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #371174;
+  padding: .5rem 1rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 2rem;
+    margin-top: 8rem;
+  }
+
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .nav {
+    all: unset;
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #371174;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  .header .nav--open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    transition: transform .4s;
+    border-radius: 0 0 10px 0;
+  }
+
+  .header .nav--open a {
+    color: #000;
+    padding: 1rem 2rem;
+    display: inline-block;
+    text-decoration: none;
+    transition-duration: .4s;
+  }
+
+  .nav--open a:hover {
+    background-color: #fff;
+    border-radius: 10px;
+    color: #371174;
+    text-decoration: underline;
+  }
+}
+
+/* Sections */
