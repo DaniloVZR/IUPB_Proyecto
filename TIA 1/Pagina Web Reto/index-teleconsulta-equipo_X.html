@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Teleconsulta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="teleconsulta-css.css">
+</head>
+
+<body>
+    <h2 class="text-center">Formulario de Teleconsulta</h2>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Equipo</h2>
+                <ul>
+                    <li>Paulina Cardona</li>
+                    <li>Sebastian Puerta</li>
+                    <li>Angelo Alexander Arango</li>
+                    <li>Danilo Urrego</li>
+                </ul>
+            </div>
+        </div>
+
+        <form id="teleconsulta-form">
+            <div class="row">
+                <!-- Datos del Paciente -->
+                <div class="col-md-6" id="datosPaciente">
+                    <h4>Datos del Paciente</h4>
+                    <label for="cedulaPaciente" class="form-label">ID:</label>
+                    <input type="text" class="form-control" id="cedulaPaciente" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nombrePaciente" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombrePaciente" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellidoPaciente" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="apellidoPaciente" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="edadPaciente" class="form-label mt-2">Edad:</label>
+                            <input type="number" class="form-control" id="edadPaciente" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="genero" class="form-label mt-2">Género:</label>
+                            <select class="form-select mb-3" id="generoPaciente">
+                                <option value="">-- Seleccionar --</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="no-decir">Prefiero no decir</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+
+                    <label for="fotoPaciente" class="form-label mt-2">Foto del Paciente:</label>
+                    <input type="file" class="form-control" id="fotoPaciente" accept="image/*" required>
+                    <img id="previewPaciente" class="img-preview mt-2">
+                </div>
+
+                <!-- Datos del Doctor -->
+                <div class="col-md-6" id="datosDoctor">
+                    <div>
+                        <h4>Datos del Doctor</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nombreDoctor" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombreDoctor" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apellidoDoctor" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellidoDoctor" required>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="especialidad" class="form-label mt-2">Especialidad:</label>
+                                <select class="form-select mb-3" id="especialidad">
+                                    <option value="">-- Seleccionar --</option>
+                                    <option value="medicina-general">Medicina General</option>
+                                    <option value="cardiologo">Cardiólogo</option>
+                                    <option value="dermatologo">Dermatólogo</option>
+                                    <option value="psiquiatra">Psiquiatra</option>
+                                </select>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <label for="genero" class="form-label mt-2">Género:</label>
+                                <select class="form-select mb-3" id="generoDoctor">
+                                    <option value="">-- Seleccionar --</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="no-decir">Prefiero no decir</option>
+                                </select>                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="opcioneImagen">
+                        <label for="fotoDoctor" class="form-label mt-2">Foto del Doctor:</label>
+                        <input type="file" class="form-control" id="fotoDoctor" accept="image/*" required>
+                        <img id="previewDoctor" class="img-preview mt-2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ubicación -->
+            <!-- Colocar aquí la etiquete para incluir el mapa de Google Maps -->
+            <div class="mt-4">
+                <h4>Ubicación</h4>
+                <div id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3334.930844059469!2d-75.58715795597963!3d6.27379106863368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44293b5709163d%3A0x2744a3a12c601259!2sInstituci%C3%B3n%20Universitaria%20Pascual%20Bravo!5e0!3m2!1ses!2sco!4v1741361204054!5m2!1ses!2sco"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Diagnóstico -->
+            <div class="mt-4" id="datosDiagnostico">
+                <h4>Diagnóstico</h4>
+                <label for="sintomas" class="form-label">Síntomas:</label>
+                <textarea class="form-control" id="sintomas" rows="3"></textarea>
+
+                <label for="diagnostico" class="form-label mt-2">Diagnóstico:</label>
+                <textarea class="form-control" id="diagnostico" rows="3"></textarea>
+
+                <!-- Diagnóstico - Audio -->
+                <div class="mt-3">
+                    <audio id="audioPlayback" controls class="mt-3"></audio>
+                </div>
+
+                <label for="diagnostico" class="form-label mt-2">Observaciones Adicionales:</label>
+                <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-success mt-4 w-100" id="miBoton">Enviar Teleconsulta</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="teleconsulta-script.js"></script>
+
+</body>
+
+</html>

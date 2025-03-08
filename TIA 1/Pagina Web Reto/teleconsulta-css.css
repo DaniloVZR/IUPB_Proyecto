@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: #1d1d1d;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Secciones de datos */
+#datosPaciente, #datosDoctor {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#datosPaciente {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: #333;
+}
+
+#datosDoctor {    
+    background: linear-gradient(135deg, #79948e, #96e6a1);
+    color: #333;
+}
+
+/* Inputs y selects */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para imágenes */
+.img-preview {
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;   
+    display: block;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-preview:hover {
+    transform: scale(1.05);
+}
+
+#datosDoctor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Mapa */
+#map {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Diagnóstico */
+#datosDiagnostico {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botón de envío */
+.btn-success {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #76b852, #8dc26f);
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
