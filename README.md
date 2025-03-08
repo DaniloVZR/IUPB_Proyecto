@@ -1,1 +1,8 @@
-Proyecto Pequeño: Introducción a desarrollo web
+Curso de Desarrollo Web
+
+Grupo 5:
+
+- Angelo Alexander Arango Graciano
+- Joimar Danilo Urrego David
+- Sebastian Puerta Mejía
+- Paulina Cardona Cardona
