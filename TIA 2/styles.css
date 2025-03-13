@@ -1,0 +1,27 @@
+body {
+  background: #000000;
+}
+
+.text-subtitles {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #055624;
+}
+
+.card {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex button {
+  flex: 1;
+}
