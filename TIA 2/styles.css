@@ -1,20 +1,47 @@
 body {
-  background: #000000;
+  background: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.header-section {
+  background-color: #6741d9;
+  padding: 2rem 0;
+  color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-principal {
+  background-color: #6741d9;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: white;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .text-subtitles {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #055624;
+  color: #6741d9;
+  border-bottom: 2px solid #6741d9;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .card {
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 .flex {
@@ -24,4 +51,116 @@ body {
 
 .flex button {
   flex: 1;
+}
+
+.deshabilitar {
+  display: none !important;
+}
+
+.form-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.deadline-alert {
+  background-color: #ffc107;
+  color: #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #6741d9;
+  border-color: #6741d9;
+}
+
+.btn-primary:hover {
+  background-color: #5a38c0;
+  border-color: #5a38c0;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.feature-list {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.call-to-action {
+  background: linear-gradient(to right, #6741d9, #8c68e6);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+
+.professor-card {
+  margin-bottom: 1rem;
+  border-left: 4px solid #6741d9;
+}
+
+/* Estilos adicionales para el formulario */
+.professor-cards-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.form-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+  border-color: #6741d9;
+  box-shadow: 0 0 0 0.25rem rgba(103, 65, 217, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #6741d9;
+  border-color: #6741d9;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #6741d9;
+  color: #6741d9;
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+  border-color: #5a38c0;
+  color: #5a38c0;
+}
+
+textarea.form-control {
+  min-height: 80px;
 }

@@ -7,97 +7,201 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>Formulario</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="text-center my-5">
-      <h1>Formulario de inscripción de proyecto</h1>
+  <div class="container py-4">
+    <div class="header-section text-center py-5">
+      <h1 class="display-4">Formulario de inscripción de proyecto</h1>
+      <p class="lead">Complete los datos para registrar su proyecto</p>
     </div>
     <div>
-      <button class="col btn btn-primary mb-4" onclick="window.location.href = 'index.html'">
-        Volver
+      <button class="btn btn-light mb-4" onclick="window.location.href = 'index.html'">
+        <i class="bi bi-arrow-left"></i> Volver
       </button>
-      <form>
-        <div class="mb-3">
-          <h3 class="text-subtitles">Tipo de Proyecto</h3>
-          <div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="PA" value="PA" checked
-                onchange="toggleProfesorFields()">
-              <label class="form-check-label" for="PA">
-                PA
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="PIA" value="PIA"
-                onchange="toggleProfesorFields()">
-              <label class="form-check-label" for="PIA">
-                PIA
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Colocar formulario para proyecto PA -->
-        <div id="paContainer" style="display: block;">
-
-        </div>
-
-        <div id="piaContainer" style="display: none;">
-          <div class="row">
-            <div class="col-md-6">
-              <h3 class="text-subtitles">Información Del Profesor</h3>
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+      
+      <div class="card p-4 mb-4">
+        <form>
+          <div class="form-section mb-4">
+            <h3 class="text-subtitles">Tipo de Proyecto</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="PA" value="PA" checked
+                    onchange="toggleProfesorFields()">
+                  <label class="form-check-label" for="PA">
+                    Proyecto de Aula (PA)
+                  </label>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" name="apellido" required>
+              <div class="col-md-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="PIA" value="PIA"
+                    onchange="toggleProfesorFields()">
+                  <label class="form-check-label" for="PIA">
+                    Proyecto Integrador de Aula (PIA)
+                  </label>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="correo" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="correo" name="correo" required>
-              </div>
-              <div class="mb-3">
-                <label for="nombrePrograma" class="form-label">Nombre del programa académico</label>
-                <input type="text" class="form-control" id="nombrePrograma" name="nombrePrograma" required>
-              </div>
-              <div class="mb-3">
-                <label for="nombreCurso" class="form-label">Nombre del curso</label>
-                <input type="text" class="form-control" id="nombreCurso" name="nombreCurso" required>
-              </div>
-              <div class="mb-3">
-                <label for="nivelCurso" class="form-label">Nivel del curso</label>
-                <input type="text" class="form-control" id="nivelCurso" name="nivelCurso" required>
-              </div>
-              <button type="button" class="btn btn-primary" onclick="agregarProfesor()">Agregar Profesor</button>
-            </div>
-
-            <div class="col-md-6">
-              <h3 class="text-subtitles">Profesores Agregados</h3>
-              <div id="profesoresCards"></div>
             </div>
           </div>
-        </div>
 
-        <hr />
-
-        <!-- Complementar los formularios -->
-
-        <div class="mb-3">
-          <h3 class="text-subtitles">Información Del Proyecto</h3>
-          <div class="mb-3">
-            <label for="nombreProyecto" class="form-label">Nombre del proyecto</label>
-            <input type="text" class="form-control" id="nombreProyecto" name="nombreProyecto" required>
+          <!-- Colocar formulario para proyecto PA -->
+          <div id="paContainer" class="form-section" style="display: block;">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-subtitles">Información Del Profesor</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nombrePa" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="apellidoPa" name="apellido" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="correo" class="form-label">Correo</label>
+                      <input type="email" class="form-control" id="correoPa" name="correo" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="nombrePrograma" class="form-label">Nombre del programa académico</label>
+                      <input type="text" class="form-control" id="nombreProgramaPa" name="nombrePrograma" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombreCurso" class="form-label">Nombre del curso</label>
+                      <input type="text" class="form-control" id="nombreCursoPa" name="nombreCurso" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nivelCurso" class="form-label">Nivel del curso</label>
+                      <input type="text" class="form-control" id="nivelCursoPa" name="nivelCurso" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <button type=" submit" class="btn btn-success">Enviar</button>
-      </form>
+          <div id="piaContainer" class="form-section" style="display: none;">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-subtitles">Información Del Profesor</h3>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" name="apellido" required>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo</label>
+                  <input type="email" class="form-control" id="correo" name="correo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="nombrePrograma" class="form-label">Nombre del programa académico</label>
+                  <input type="text" class="form-control" id="nombrePrograma" name="nombrePrograma" required>
+                </div>
+                <div class="mb-3">
+                  <label for="nombreCurso" class="form-label">Nombre del curso</label>
+                  <input type="text" class="form-control" id="nombreCurso" name="nombreCurso" required>
+                </div>
+                <div class="mb-3">
+                  <label for="nivelCurso" class="form-label">Nivel del curso</label>
+                  <input type="text" class="form-control" id="nivelCurso" name="nivelCurso" required>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-primary" onclick="agregarProfesor()" id="btn-agregarP">Agregar Profesor</button>
+                  <button type="button" class="btn btn-primary d-none" onclick="guardarProfesor()" id="btn-guardarP">Guardar Profesor</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h3 class="text-subtitles">Profesores Agregados</h3>
+                <div id="profesoresCards" class="professor-cards-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section mb-4">
+            <h3 class="text-subtitles">Información Del Proyecto</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="nombreProyecto" class="form-label">Nombre del proyecto</label>
+                  <input type="text" class="form-control" id="nombreProyecto" name="nombreProyecto" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="descripcionProyecto" class="form-label">Descripción del proyecto</label>
+                  <textarea class="form-control" id="descripcionProyecto" name="descripcionProyecto" rows="3" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="rProyecto" class="form-label">Relacionar el proyecto con microcurrículo del curso:</label>
+                  <textarea class="form-control" id="rProyecto" name="rProyecto" rows="2" required></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- checklist-->
+          <div class="form-section mb-4">
+            <h3 class="text-subtitles">Resultados esperados del proyecto</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="revisionBibliografica">
+                  <label class="form-check-label" for="revisionBibliografica">Revisión bibliográfica (marco teórico y estado de arte)</label>
+                </div>
+                
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="diseno">
+                  <label class="form-check-label" for="diseno">Diseño (conceptual, básico y de detalles)</label>
+                </div>
+                
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="simulacionComputacional">
+                  <label class="form-check-label completed" for="simulacionComputacional">Simulación computacional</label>
+                </div>
+                
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="modelosAnaliticos">
+                  <label class="form-check-label" for="modelosAnaliticos">Modelos analíticos</label>
+                </div>
+              </div>
+              
+              <div class="col-md
+              -6">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="construccionPrototipo">
+                  <label class="form-check-label completed" for="construccionPrototipo">Construcción de prototipo</label>
+                </div>
+              
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="investigacion">
+                  <label class="form-check-label" for="investigacion">Investigación (busca de responder una pregunta de investigación de carácter formativo)</label>
+                </div>
+            
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="otro">
+                  <label class="form-check-label" for="otro">Otro</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success btn-lg px-5" onclick="enviarform()">Enviar Inscripción</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
