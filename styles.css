@@ -1,0 +1,60 @@
+body {
+  background: #000000;
+}
+
+.text-subtitles {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #055624;
+}
+.text-center
+{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.card {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex button {
+  flex: 1;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Espaciado entre secciones */
+.section-morado {
+  margin-top: 20px;
+  margin-bottom: 40px; /* Separa la siguiente sección */
+}
+
+/* Estilos del botón morado */
+.btn-morado {
+  background-color: rgb(233, 62, 233);
+  border: 2px solid rgb(233, 62, 233);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Espaciado en la sección de inscripción */
+.section-inscripcion {
+  margin-top: 40px;
+}
+
+
