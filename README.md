@@ -6,3 +6,4 @@ Grupo 5:
 - Joimar Danilo Urrego David
 - Sebastian Puerta Mejía
 - Paulina Cardona Cardona
+- Luis Miguel Sosa Bohorquez
