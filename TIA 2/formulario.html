@@ -90,13 +90,52 @@
         <!-- Complementar los formularios -->
 
         <div class="mb-3">
-          <h3 class="text-subtitles">Información Del Proyecto</h3>
+          <h3 class="text-subtitles">Información del Proyecto</h3>
           <div class="mb-3">
-            <label for="nombreProyecto" class="form-label">Nombre del proyecto</label>
-            <input type="text" class="form-control" id="nombreProyecto" name="nombreProyecto" required>
+            <label for="tituloProyecto" class="form-label">Título preliminar del proyecto</label>
+            <input type="text" class="form-control" id="tituloProyecto" name="tituloProyecto" required>
           </div>
-
-          <button type=" submit" class="btn btn-success">Enviar</button>
+          
+          <div class="mb-3">
+            <label for="descripcionProyecto" class="form-label">Descripción preliminar del proyecto</label>
+            <textarea class="form-control" id="descripcionProyecto" name="descripcionProyecto" rows="3" required></textarea>
+          </div>
+        
+          <div class="mb-3">
+            <label for="relacionCurso" class="form-label">Relacionar el proyecto con el curso</label>
+            <textarea class="form-control" id="relacionCurso" name="relacionCurso" rows="3" required></textarea>
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <h3 class="text-subtitles">Resultados Esperados</h3>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="revisionBibliografica">
+            <label class="form-check-label" for="revisionBibliografica">Revisión bibliográfica</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="diseno">
+            <label class="form-check-label" for="diseno">Diseño (conceptual, básico y de detalles)</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="simulacion">
+            <label class="form-check-label" for="simulacion">Simulación computacional</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="modelosAnaliticos">
+            <label class="form-check-label" for="modelosAnaliticos">Modelos analíticos</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="investigacion">
+            <label class="form-check-label" for="investigacion">Investigación</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="otro">
+            <label class="form-check-label" for="otro">Otro</label>
+          </div>
+        </div>
+        
+        <button type="button" class="btn btn-success" id="enviarFormulario">Enviar</button>
       </form>
     </div>
   </div>
